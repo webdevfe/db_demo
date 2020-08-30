@@ -50,7 +50,7 @@ const Tables = () => {
           justify="center"
           alignItems="center"
         >
-          <Grid item md={1} sm={1} xs={12}>
+          <Grid item md={2} sm={2} xs={12}>
             <div className={classes.root}>
               <Tabs
                 orientation="vertical"
@@ -66,7 +66,7 @@ const Tables = () => {
               </Tabs>
             </div>
           </Grid>
-          <Grid item md={11} sm={11} xs={12} container direction="row">
+          <Grid item md={10} sm={10} xs={12} container direction="row">
             <Grid item md={3} sm={12} xs={12}>
               {tables.map((item:TableProps, i) => (
                 <TableTabPanel value={item.table.split('_').join(' ')} table={table}
@@ -89,13 +89,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#fff',
     display: 'flex',
     height: 230,
+    '& .MuiTabs-root': {
+      width: '100%',
+    },
   },
 
   tabs: {
     borderRight: `1px solid #ccc`,
     '& button span.MuiTab-wrapper': {
       flexDirection: 'row',
-      justifyContent: 'end',
+      justifyContent: 'left',
+      fontSize: '14px',
     },
   },
 }));
