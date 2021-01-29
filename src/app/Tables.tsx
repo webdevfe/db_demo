@@ -12,15 +12,15 @@ const Tables = () => {
   const classes = useStyles();
 
   const fetchTables = async () => {
-    const data = await fetch(`https://interview.torodata.io/tables`);
-    //const data = await fetch('http://localhost:4000/tables');
+    //const data = await fetch(`https://.../tables`);
+    const data = await fetch('http://localhost:4000/tables');
     const res = await data.json();
     setTables(res);
   }
 
   const fetchTableData = async (newValue: number) => {
-    const data = await fetch(`https://interview.torodata.io/metrics/${newValue+1}`)
-    //const data = await fetch(`http://localhost:4000/table/${newValue}`);
+    //const data = await fetch(`https://.../metrics/${newValue+1}`)
+    const data = await fetch(`http://localhost:4000/table/${newValue}`);
     const res = await data.json();
     setTableMetrics(res);
   }

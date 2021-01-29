@@ -1,5 +1,5 @@
 {
-  "name": "toroData-test",
+  "name": "DB-demo",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,7 @@
     "@types/node": "^12.12.36",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^16.13.1",
